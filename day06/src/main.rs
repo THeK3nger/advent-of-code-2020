@@ -107,13 +107,14 @@ fn part2(input: &str) -> Result<()> {
             group
                 .split("\n")
                 .map(|question| question.chars().collect::<HashSet<char>>())
+                // The idea is to intersect all the lines in a group.
                 .fold(None, |acc, x| {
                     if acc == None {
                         Some(x)
                     } else {
                         Some(acc.unwrap().intersection(&x).cloned().collect())
                     }
-                })
+                }) // This could be much better. But `fold_first()` is still nightly-only.
                 .map(|x| x.len())
         })
         .map(|x| x.unwrap())
