@@ -1,0 +1,10 @@
+[package]
+name = "aoc2020-day6"
+version = "0.1.0"
+authors = ["Davide Aversa <thek3nger@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+regex = "1"
+
+common = { path = "../common" }
