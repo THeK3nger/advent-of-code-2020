@@ -13,3 +13,9 @@ cargo run -p aoc2020-dayX < dayX/input.txt
 ```
 
 where `X` is the day of the solution you want to try.
+
+Or, in PowerShell:
+
+```powershell
+Get-Content .\dayX\test.txt | cargo run -p aoc2020-dayX
+```
