@@ -17,6 +17,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "aoc2020-day10"
+version = "0.1.0"
+dependencies = [
+ "common",
+ "regex",
+]
+
+[[package]]
 name = "aoc2020-day2"
 version = "0.1.0"
 dependencies = [
