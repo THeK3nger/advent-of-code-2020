@@ -149,16 +149,14 @@ fn part2(input: &str) -> Result<()> {
         .collect();
 
     let mut timestamp = START_INPUT;
-    //let mut timestamp = 3417u64;
     let mut step = 1;
     let mut bus = 0;
     while bus < busses.len()
     {
         let (x, id) = busses[bus];
-        if (id - timestamp % id) % id == (x as u64 % id) as u64 {
+        if (id - timestamp % id) % id == x as u64 % id {
             step *= id;
             bus += 1;
-            // println!("{} {} +{}", bus, timestamp, step);
             continue;
         }
         timestamp += step;
